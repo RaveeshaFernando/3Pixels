@@ -1,1 +1,39 @@
-<p>navbar works!</p>
+
+    <mdb-navbar class="navCss" SideClass="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" [containerInside]="false">
+        <mdb-navbar-brand>
+            <a class="logo navbar-brand" href="#">
+                <img src="../../../../assets/images/logoWhite.png" alt="logo" width="100px">
+            </a>
+        </mdb-navbar-brand>
+
+        <links>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item waves-light" mdbWavesEffect>
+
+                   <h6><a href="#home"  class="nav-link" style="padding-top: 15px;padding-right: 50px;">Home</a> </h6>
+                </li>
+                <li class="nav-item waves-light" mdbWavesEffect >
+                    <h6><a [routerLink]="['/dashboard']" class="nav-link" style="padding-top: 15px;padding-right: 50px;"> Gallery </a> </h6>
+                </li>
+                <li class="nav-item waves-light" mdbWavesEffect >
+                    <h6><a href="#contacts" class="nav-link" style="padding-top: 15px;padding-right: 50px;"> Contact </a> </h6>
+                </li>
+                <li class="nav-item waves-light" mdbWavesEffect >
+                    <h6><a href="#contacts" class="nav-link" style="padding-top: 15px;padding-right: 50px;"> Pricing </a> </h6>
+                </li>
+                <li class="nav-item waves-light" mdbWavesEffect >
+                    <h6><a href="#contacts" class="nav-link" style="padding-top: 15px;padding-right: 50px;"> Who are we? </a> </h6>
+                </li>
+            </ul>
+
+
+
+
+
+            <ul class="navbar-nav nav-flex-icons" style="width: 250px;">
+                <li class="nav-item waves-light" mdbWavesEffect >
+                    <h6><a href="#contacts" class="nav-link" style="padding-top: 15px;padding-right: 50px;"> <div class="text-center" style="background-color: royalblue;padding: 5px ;border-radius: 5px ;"> Request a price quotation? </div>  </a> </h6> 
+                </li>
+            </ul>
+        </links>
+    </mdb-navbar>
