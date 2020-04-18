@@ -1,7 +1,7 @@
 header {
     position: relative;
     background-color: black;
-    height: 75vh;
+    height: 100vh;
     min-height: 25rem;
     width: 100%;
     overflow: hidden;
@@ -34,11 +34,27 @@ header {
     height: 100%;
     width: 100%;
     background-color: black;
-    opacity: 0.5;
+    opacity: 0.7;
     z-index: 1;
   }
 
+  
+//Carousal
 
+.feature {margin: 15px 0px;}
+
+.feature i {
+    float: left;
+    padding: 5px;
+    border-radius: 50%;
+    color:#222;
+    border: 1px solid #222;
+    margin-right: 5px;
+}
+
+.feature h5 {
+    font-size: calc(1em + 0.3vw);
+}
 
 
 
