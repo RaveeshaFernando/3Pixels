@@ -1,0 +1,41 @@
+<section class="container my-5 text-center" style="background-size: cover; background-position: center center;max-width: 500px;padding-top: 150px;">  
+    <div class="card">
+        <h5 class="card-header primary-color white-text text-center py-4">
+            <strong>Sign up</strong>
+        </h5>
+        <div class="card-body px-lg-5 pt-0">
+            <form class="text-center" style="color: #757575;" action="#!" #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+                <div class="form-row">
+                    <div class="col">
+                        <div class="md-form">
+                            <input type="text" id="materialRegisterFormFirstName" class="form-control" placeholder="First Name" name="firstName" #firstName="ngModel" [(ngModel)]="authService.addNewUser.firstName" required>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <input type="email" id="materialRegisterFormLastName" class="form-control" placeholder="Last Name"  name="lastName" #lastName="ngModel" [(ngModel)]="authService.addNewUser.lastName" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="md-form mt-0">
+                    <input type="email" id="materialRegisterFormEmail" class="form-control" placeholder="E-mail"  name="email" #email="ngModel" [(ngModel)]="authService.addNewUser.email" required>
+                </div>
+                <div class="md-form">
+                    <input type="password" id="materialRegisterFormPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock" placeholder="Password">
+                    <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+                        At least 8 characters 
+                    </small>
+                </div>
+                <div class="md-form">
+                    <input type="password" id="materialRegisterFormPhone" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" placeholder="Phone Number"  name="mobile" #mobile="ngModel" [(ngModel)]="authService.addNewUser.mobile" required>
+                    <small id="materialRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
+                        Optional - for two step authentication
+                    </small>
+                </div>
+                <button class="btn btn-outline-primary btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Sign in</button>
+                <hr>
+                <p> already a member?  <a [routerLink]="['/signin']" >Sign in</a> here! </p>
+            </form>
+        </div>
+    </div>
+</section>

@@ -1,5 +1,5 @@
 
-    <mdb-navbar class="navCss" SideClass="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" [containerInside]="false">
+    <mdb-navbar class="navCss" SideClass="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar " [containerInside]="false" style="background-color: royalblue;">
         <mdb-navbar-brand>
             <a class="logo navbar-brand" href="#">
                 <img src="../../../../assets/images/logoWhite.png" alt="logo" width="100px">
@@ -9,20 +9,19 @@
         <links>
             <ul class="navbar-nav mr-auto" >
                 <li class="nav-item waves-light text-center" style="width: 100px ;"  mdbWavesEffect>
-
-                   <h6><a href="#home"  class="nav-link " style="padding-top: 15px ; color:#c6a16e"> <strong>Home  </strong>  </a></h6>
+                   <h6><a href="#home"  class="nav-link " style="padding-top: 15px"> Home  </a></h6>
                 </li>
                 <li class="nav-item waves-light text-center" style="width: 100px ;" mdbWavesEffect >
-                    <h6><a href="https://www.flickr.com/photos/workofthreepixels/albums" class="nav-link " style="padding-top: 15px ; color:#c6a16e"> <strong> Gallery  </strong>  </a> </h6>
+                    <h6><a href="https://www.flickr.com/photos/workofthreepixels/albums" class="nav-link " style="padding-top: 15px">  Gallery  </a> </h6>
                 </li>
                 <li class="nav-item waves-light text-center" style="width: 100px ;" mdbWavesEffect >
-                    <h6><a href="#contacts" class="nav-link " style="padding-top: 15px ; color:#c6a16e"> <strong> Contact  </strong>  </a> </h6>
+                    <h6><a href="#contacts" class="nav-link " style="padding-top: 15px">  Contact  </a> </h6>
                 </li>
                 <li class="nav-item waves-light text-center" style="width: 100px ;" mdbWavesEffect >
-                    <h6><a href="#contacts" class="nav-link " style="padding-top: 15px ; color:#c6a16e"> <strong> Pricing   </strong> </a> </h6>
+                    <h6><a href="#contacts" class="nav-link " style="padding-top: 15px">  Pricing  </a> </h6>
                 </li>
                 <li class="nav-item waves-light text-center" style="width: 150px ;" mdbWavesEffect >
-                    <h6><a href="#contacts" class="nav-link " style="padding-top: 15px ; color:#c6a16e"> <strong> Who are we?  </strong>  </a> </h6>
+                    <h6><a href="#contacts" class="nav-link " style="padding-top: 15px">  Who are we?  </a> </h6>
                 </li>
             </ul>
 
@@ -32,7 +31,7 @@
 
             <ul class="navbar-nav nav-flex-icons" style="width: 250px;">
                 <li class="nav-item waves-light text-center" mdbWavesEffect >
-                    <h6><a href="#contacts" class="nav-link" style="padding-top: 15px;padding-right: 50px;"> <div class="text-center" style="background-color:#c6a16e;padding: 5px ;border-radius: 5px ;"> Request a price quotation? </div>  </a> </h6> 
+                    <h6><a [routerLink]="['/signin']" class="nav-link" style="padding-top: 15px;padding-right: 50px;"> <div class="text-center" style="background-color:royalblue;padding: 5px ;border-radius: 5px ;"> Request a price quotation? </div>  </a> </h6> 
                 </li>
             </ul>
         </links>
