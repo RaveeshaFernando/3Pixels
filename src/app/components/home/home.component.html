@@ -32,317 +32,361 @@
     <div class="section" id="carousel" style="padding-top: 50px;padding-bottom: 50px ;">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-12 feature">
+                <div class="col-lg-4 col-md-12 feature">
                   <h1 style="font-size:calc(3em + 1vw); font-family: 'Tangerine';color: #c6a16e;"> Who are we ,  <strong> 3 Pixels ? </strong> </h1>
                   <br>
                   <h3 style="padding: 15px; text-align: justify ; font-family: 'Tangerine', cursive;color: #c6a16e;font-size: 200%;"> " Sometimes pictures do tell the story of life. We capture your life story in an amazingly uncommon way. " </h3>
                 </div>
   
-                <div class="col-lg-6 col-md-12">
+                <div class="col-lg-8 col-md-12">
                   <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'">
-                      <mdb-carousel-item>
-                        <img class="d-block w-100" style="border-radius: 5px;" src="assets/Slides/wedding2.jpg" alt="First slide">
-                      </mdb-carousel-item>
-                      <mdb-carousel-item>
-                        <img class="d-block w-100" style="border-radius: 5px;" src="assets/Slides/birthday.jpg" alt="Second slide">
-                      </mdb-carousel-item>
-                      <mdb-carousel-item>
-                        <img class="d-block w-100" style="border-radius: 5px;" src="assets/Slides/fennes_wedding.jpg" alt="Fourth slide">
-                      </mdb-carousel-item>
-                      <mdb-carousel-item>
-                        <img class="d-block w-100" style="border-radius: 5px;" src="assets/Slides/party.jfif" alt="Fifth slide">
-                      </mdb-carousel-item>
-                      <mdb-carousel-item>
-                          <img class="d-block w-100" style="border-radius: 5px;" src="assets/Slides/party2.jfif" alt="Nineth slide">
-                      </mdb-carousel-item>
-                      <mdb-carousel-item>
-                        <img class="d-block w-100" style="border-radius: 5px;" src="assets/Slides/band.jpg" alt="Eleventh slide">
-                      </mdb-carousel-item>
+                    <mdb-carousel-item>
+                      <img class="d-block w-100" style="border-radius: 5px;" src="assets/Slides/image1.jpg" alt="slide 1">
+                    </mdb-carousel-item>
+                    <mdb-carousel-item>
+                      <img class="d-block w-100" style="border-radius: 5px;" src="assets/Slides/image2.jpg" alt="slide 2">
+                    </mdb-carousel-item>
+                    <mdb-carousel-item>
+                      <img class="d-block w-100" style="border-radius: 5px;" src="assets/Slides/image3.jpg" alt="slide 3">
+                    </mdb-carousel-item>
+                    <mdb-carousel-item>
+                      <img class="d-block w-100" style="border-radius: 5px;" src="assets/Slides/image4.jpg" alt="slide 4">
+                    </mdb-carousel-item>
+                    <mdb-carousel-item>
+                      <img class="d-block w-100" style="border-radius: 5px;" src="assets/Slides/image5.jpg" alt="slide 5">
+                    </mdb-carousel-item>
+                    <mdb-carousel-item>
+                      <img class="d-block w-100" style="border-radius: 5px;" src="assets/Slides/image6.jpg" alt="slide 6">
+                    </mdb-carousel-item>
+                    <mdb-carousel-item>
+                      <img class="d-block w-100" style="border-radius: 5px;" src="assets/Slides/image7.jpg" alt="slide 7">
+                    </mdb-carousel-item>
+                    <mdb-carousel-item>
+                      <img class="d-block w-100" style="border-radius: 5px;" src="assets/Slides/image8.jpg" alt="slide 8">
+                    </mdb-carousel-item>
                   </mdb-carousel>
                 </div>
             </div>
         </div>
     </div> 
+
     <!----------------------------------------------------| WHAT WE OFFER |------------------------------------------------>
 
-    <div class=" text-center" style="padding: 50px;">
-      <h1 class="title" style="font-size:calc(3em + 1vw); font-family: 'Tangerine' ;color: #c6a16e;"> What We offer of clients </h1> <br>
-      <div class="row text-center">
-        <div class="col-md-3 ml-auto col-xl-3 mr-auto">
-          <div class="card">
-            <div class="nav-tabs-navigation">
-              <div class=" text-center">
-                <br>
-                <img src="../../assets/Square/wedding.JPG" alt="Circle Image" class="rounded-circle" style="padding: 20px;max-width: 200px;">
-                <h3> Weddings </h3> 
-                <button class="btn-lg offer_btn" [routerLink]="['/FilterPage/weddings']"  >Search now</button>
-                <br><br>       
+        <div class="container">
+          <section class="p-md-3 mx-md-5 text-center text-lg-left">
+            <h1 class="title text-center" style="font-size:calc(3em + 1vw); font-family: 'Tangerine' ;color:black;"> What We offer of clients </h1> 
+            <hr style="background-color: #333 ; width: 30vw;height: 5px;"> 
+            <br>
+            <div class="row">
+              <div class="col-lg-4 col-md-6" style="padding-bottom: 30px;">
+                <div class="card z-depth-3" style="background: #223;">
+                  <div class="avatar w-100 d-flex justify-content-center align-items-center" style="background-color: #223;">
+                    <img src="assets/Slides/vibrant.jpg" class="img-fluid rounded-circle" style="padding: 60px;border-color: royalblue;" />
+                  </div>
+                  <div class="card-body text-center" style="margin-top: -60px;">
+                    <hr style="width: 70%;height: 2px;background-color: royalblue;">
+                    <h3> Weddings </h3> 
+                    <br>
+                    <button class="btn-lg offer_btn" [routerLink]="['/FilterPage/Parties']">Search now</button>
+                    <br><br>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 ml-auto col-xl-3 mr-auto">
-          <div class="card">
-            <div class="nav-tabs-navigation">
-              <div class="text-center">
-                <br>
-                <img src="../../assets/Square/Cooperate_Events.jpg" alt="Circle Image" class="rounded-circle" style="padding: 20px;max-width: 200px;">
-                <h3> Co-operate Events </h3> 
-                <button class="btn-lg offer_btn" [routerLink]="['/FilterPage/coevents']">Search now</button>
-                <br><br>       
+
+              <div class="col-lg-4 col-md-6" style="padding-bottom: 30px;">
+                <div class="card z-depth-3" style="background: #223;">
+                  <div class="avatar w-100 d-flex justify-content-center align-items-center" style="background-color: #223;">
+                    <img src="assets/Slides/vibrant.jpg" class="img-fluid rounded-circle" style="padding: 60px;border-color: royalblue;" />
+                  </div>
+                  <div class="card-body text-center" style="margin-top: -60px;">
+                    <hr style="width: 70%;height: 2px;background-color: royalblue;">
+                    <h3> Birthday Parties </h3> 
+                    <br>
+                    <button class="btn-lg offer_btn" [routerLink]="['/FilterPage/Parties']">Search now</button>
+                    <br><br>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 ml-auto col-xl-3 mr-auto">
-          <div class="card">
-            <div class="nav-tabs-navigation">
-              <div class="text-center">
-                <br>
-                <img src="../../assets/Square/parties1.jpg" alt="Circle Image" class="rounded-circle" style="padding: 20px; width: 200px; height: 200px;">
-                <h3> Parties </h3> 
-                <button class="btn-lg offer_btn" [routerLink]="['/FilterPage/Parties']">Search now</button>
-                <br><br>       
+              
+              <div class="col-lg-4 col-md-6" style="padding-bottom: 30px;">
+                <div class="card z-depth-3" style="background: #223;">
+                  <div class="avatar w-100 d-flex justify-content-center align-items-center" style="background-color: #223;">
+                    <img src="assets/Slides/vibrant.jpg" class="img-fluid rounded-circle" style="padding: 60px;border-color: royalblue;" />
+                  </div>
+                  <div class="card-body text-center" style="margin-top: -60px;">
+                    <hr style="width: 70%;height: 2px;background-color: royalblue;">
+                    <h3> Coorporate Events </h3> 
+                    <br>
+                    <button class="btn-lg offer_btn" [routerLink]="['/FilterPage/Parties']">Search now</button>
+                    <br><br>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br><br>
-      <div class="row text-center">
-        <div class="col-md-3 ml-auto col-xl-3 mr-auto">
-          <div class="card">
-            <div class="nav-tabs-navigation">
-              <div class="text-center">
-                <br>
-                <img src="../../assets/Square/sports.jpg" alt="Circle Image" class="rounded-circle" style="padding: 20px;max-width: 200px;">
-                <h3> Sport Events </h3> 
-                <button class="btn-lg offer_btn" [routerLink]="['/FilterPage/sports']">Search now</button>
-                <br><br>       
+              
+              <div class="col-lg-4 col-md-6" style="padding-bottom: 30px;">
+                <div class="card z-depth-3" style="background: #223;">
+                  <div class="avatar w-100 d-flex justify-content-center align-items-center" style="background-color: #223;">
+                    <img src="assets/Slides/vibrant.jpg" class="img-fluid rounded-circle" style="padding: 60px;border-color: royalblue;" />
+                  </div>
+                  <div class="card-body text-center" style="margin-top: -60px;">
+                    <hr style="width: 70%;height: 2px;background-color: royalblue;">
+                    <h3> Get-Togethers </h3> 
+                    <br>
+                    <button class="btn-lg offer_btn" [routerLink]="['/FilterPage/Parties']">Search now</button>
+                    <br><br>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 ml-auto col-xl-3 mr-auto">
-          <div class="card">
-            <div class="nav-tabs-navigation">
-              <div class="text-center">
-                <br>
-                <img src="../../assets/Square/get.jpg" alt="Circle Image" class="rounded-circle" style="padding: 20px;max-width: 200px;">
-                <h3> Get-Togethers</h3> 
-                <button class="btn-lg offer_btn" [routerLink]="['/FilterPage/Get-Togethers']">Search now</button>
-                <br><br>       
+              
+              <div class="col-lg-4 col-md-6" style="padding-bottom: 30px;">
+                <div class="card z-depth-3" style="background: #223;">
+                  <div class="avatar w-100 d-flex justify-content-center align-items-center" style="background-color: #223;">
+                    <img src="assets/Slides/vibrant.jpg" class="img-fluid rounded-circle" style="padding: 60px;border-color: royalblue;" />
+                  </div>
+                  <div class="card-body text-center" style="margin-top: -60px;">
+                    <hr style="width: 70%;height: 2px;background-color: royalblue;">
+                    <h3>Something Else </h3> 
+                    <br>
+                    <button class="btn-lg offer_btn" [routerLink]="['/FilterPage/Parties']">Search now</button>
+                    <br><br>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 ml-auto col-xl-3 mr-auto">
-          <div class="card">
-            <div class="nav-tabs-navigation">
-              <div class="text-center">
-                <br>
-                <img src="../../assets/Square/parties.jpg" alt="Circle Image" class="rounded-circle" style="padding: 20px;max-width: 200px;">
-                <h3> something else </h3> 
-                <button class="btn-lg offer_btn" [routerLink]="['/FilterPage/others']" >Search now</button>
-                <br><br>       
+
+              <div class="col-lg-4 col-md-6" style="padding-bottom: 30px;">
+                <div class="card z-depth-3" style="background: #223;">
+                  <div class="avatar w-100 d-flex justify-content-center align-items-center" style="background-color: #223;">
+                    <img src="assets/Slides/vibrant.jpg" class="img-fluid rounded-circle" style="padding: 60px;border-color: royalblue;" />
+                  </div>
+                  <div class="card-body text-center" style="margin-top: -60px;">
+                    <hr style="width: 70%;height: 2px;background-color: royalblue;">
+                    <h3> Something Else </h3> 
+                    <br>
+                    <button class="btn-lg offer_btn" [routerLink]="['/FilterPage/Parties']">Search now</button>
+                    <br><br>
+                  </div>
+                </div>
               </div>
+              
             </div>
-          </div>
+          </section>
         </div>
+
+    <!----------------------------------------------------| Gallery |------------------------------------------------>
+    
+    <h1 class="title text-center" style="font-size:calc(3em + 1vw); font-family: 'Tangerine';color:black ;"> Explore Photos </h1>
+    <hr style="background-color: #333 ; width: 30vw;height: 5px;"> 
+    <br>
+    <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div id="grid" class="row">
+                  <div class="mix col-sm-3 page1 page4 margin30">
+                      <div class="item-img-wrap ">
+                          <img src="assets/Slides/image1.jpg" class="img-responsive img-fluid z-depth-5 rounded" alt="workimg">
+                          <div class="item-img-overlay">
+                              <a href="#" class="show-image">
+                                  <span></span>
+                              </a>
+                          </div>
+                      </div> 
+  
+                  </div>
+                  <div class="mix col-sm-3 page2 page3 margin30">
+                      <div class="item-img-wrap ">
+                          <img src="assets/Slides/image2.jpg" class="img-responsive img-fluid z-depth-5 rounded" alt="workimg">
+                          <div class="item-img-overlay">
+                              <a href="#" class="show-image">
+                                  <span></span>
+                              </a>
+                          </div>
+                      </div> 
+  
+                  </div>
+                  <div class="mix col-sm-3  page3 page2 margin30 ">
+                      <div class="item-img-wrap ">
+                          <img src="assets/Slides/image3.jpg" class="img-responsive img-fluid z-depth-5 rounded" alt="workimg">
+                          <div class="item-img-overlay">
+                              <a href="#" class="show-image">
+                                  <span></span>
+                              </a>
+                          </div>
+                      </div> 
+  
+                  </div>
+                  <div class="mix col-sm-3  page4 margin30">
+                      <div class="item-img-wrap ">
+                          <img src="assets/Slides/image4.jpg" class="img-responsive img-fluid z-depth-5 rounded" alt="workimg">
+                          <div class="item-img-overlay">
+                              <a href="#" class="show-image">
+                                  <span></span>
+                              </a>
+                          </div>
+                      </div> 
+  
+                  </div>
+                  <div class="mix col-sm-3 page1 margin30 ">
+                      <div class="item-img-wrap ">
+                          <img src="assets/Slides/image5.jpg" class="img-responsive img-fluid z-depth-5 rounded" alt="workimg">
+                          <div class="item-img-overlay">
+                              <a href="#" class="show-image">
+                                  <span></span>
+                              </a>
+                          </div>
+                      </div> 
+  
+                  </div>
+                  <div class="mix col-sm-3  page2 margin30">
+                      <div class="item-img-wrap ">
+                          <img src="assets/Slides/image6.jpg" class="img-responsive img-fluid z-depth-5 rounded" alt="workimg">
+                          <div class="item-img-overlay">
+                              <a href="#" class="show-image">
+                                  <span></span>
+                              </a>
+                          </div>
+                      </div> 
+  
+                  </div>
+                  <div class="mix col-sm-3  page3 margin30">
+                      <div class="item-img-wrap ">
+                          <img src="assets/Slides/image7.jpg" class="img-responsive img-fluid z-depth-5 rounded" alt="workimg">
+                          <div class="item-img-overlay">
+                              <a href="#" class="show-image">
+                                  <span></span>
+                              </a>
+                          </div>
+                      </div> 
+  
+                  </div>
+                  <div class="mix col-sm-3 page4  margin30">
+                      <div class="item-img-wrap ">
+                          <img src="assets/Slides/image8.jpg" class="img-responsive img-fluid z-depth-5 rounded" alt="workimg">
+                          <div class="item-img-overlay">
+                              <a href="#" class="show-image">
+                                  <span></span>
+                              </a>
+                          </div>
+                      </div> 
+                  </div>                                                            
+              </div>
+          </div>
       </div>
     </div>
-  
-    <!------------------------------------------------------| ANALYTICS |---------------------------------------------------->  
 
-    <div id="numbers" class=" row analytics">
-      <div class="image" style="background-image: url('../../assets/Background/background02.jpg');" >
-          <div class="overlay"></div>
-      </div>
-      <div class="container">
-        <div class="row">      
-          <div class="col-sm-4 col-xs-6">
-              <div class="number">
-                  <i class="fa fa-users"></i>
-                  <h3> 253 </h3>
-                  <h5>Happy clients</h5>
-              </div>
-          </div>
-          <div class="col-sm-4 col-xs-6">
-              <div class="number" >
-                  <i class="fa fa-briefcase"></i>
-                  <h3>42</h3>
-                  <h5>Event Professionals </h5>
-              </div>
-          </div>      
-          <div class="col-sm-4 col-xs-6">
-              <div class="number">
-                  <i class="fa fa-book"></i>
-                  <h3>10</h3>
-                  <h5>User Bookings</h5>
-              </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-----------------------------------------------------| Testimonials |---------------------------------------------------->
 
-    <!----------------------------------------------------| WHAT WE OFFER PROFESSIONALS|-------------------------------------------------->
-
-    <!-- <div class=" text-center" style="padding: 50px;">
-      <h1 class="title"> Professionals Joined With Us </h1> <br>
-      <div class="row text-center">
-        <div class="col-md-3 ml-auto col-xl-3 mr-auto">
-          <div class="card">
-            <div class="nav-tabs-navigation">
-              <div class=" text-center">
-                <br>
-                <img src="../../assets/Square/photography.jpg" alt="Circle Image" class="rounded-circle" style="padding: 20px; width: 200px; height: 200px;">
-                <h3> Photographers </h3> 
-                <button class="btn-lg offer_btn" [routerLink]="['/FilterPagePro/Photographer']"  >Search now</button>
-                <br><br>       
+    <div class="container mt-5" style="padding-bottom: 80px;">
+      <section class="text-center dark-grey-text">
+        <h1 class="title text-center" style="font-size:calc(3em + 1vw); font-family: 'Tangerine';color:black ;"> Testimonials </h1>
+        <hr style="background-color: #333 ; width: 30vw;height: 5px;"> 
+        <br>
+        <div class="z-depth-2" style="background-color: #eee;">
+          <div style="padding: 20px;">
+          <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'">
+            <mdb-carousel-item>
+              <div class="testimonial">
+                <div class="avatar mx-auto mb-4">
+                  <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg" class="rounded-circle img-fluid"
+                    alt="First sample avatar image">
+                </div>
+                <p>
+                  <i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
+                  eos
+                  id officiis hic tenetur quae quaerat ad velit ab. Lorem ipsum dolor sit amet, consectetur
+                  adipisicing elit. Dolore cum accusamus eveniet molestias voluptatum inventore laboriosam labore
+                  sit, aspernatur praesentium iste impedit quidem dolor veniam.
+                </p>
+                <h4 class="font-weight-bold">Anna Deynah</h4>
+                <h6 class="font-weight-bold my-3">Founder at ET Company</h6>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 ml-auto col-xl-3 mr-auto">
-          <div class="card">
-            <div class="nav-tabs-navigation">
-              <div class="text-center">
-                <br>
-                <img src="../../assets/Square/videography.jpg" alt="Circle Image" class="rounded-circle" style="padding: 20px; width: 200px; height: 200px;">
-                <h3> Videographers </h3> 
-                <button class="btn-lg offer_btn" [routerLink]="['/FilterPagePro/videographers']">Search now</button>
-                <br><br>       
+            </mdb-carousel-item>
+            <mdb-carousel-item>
+              <div class="testimonial">
+                <div class="avatar mx-auto mb-4">
+                  <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg" class="rounded-circle img-fluid"
+                    alt="Second sample avatar image">
+                </div>
+                <p>
+                  <i class="fas fa-quote-left"></i> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                  odit
+                  aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
+                  porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
+                  non numquam eius modi tempora incidunt ut labore. </p>
+                <h4 class="font-weight-bold">Maria Kate</h4>
+                <h6 class="font-weight-bold my-3">Photographer at Studio LA</h6>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 ml-auto col-xl-3 mr-auto">
-          <div class="card">
-            <div class="nav-tabs-navigation">
-              <div class="text-center">
-                <br>
-                <img src="../../assets/Square/beautician.jpg" alt="Circle Image" class="rounded-circle" style="padding: 20px; width: 200px; height: 200px;">
-                <h3> Beauticians </h3> 
-                <button class="btn-lg offer_btn" [routerLink]="['/FilterPagePro/beauticians']">Search now</button>
-                <br><br>       
+            </mdb-carousel-item>
+            <mdb-carousel-item>
+              <div class="testimonial">
+                <div class="avatar mx-auto mb-4">
+                  <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(3).jpg" class="rounded-circle img-fluid"
+                    alt="Third sample avatar image">
+                </div>
+                <p>
+                  <i class="fas fa-quote-left"></i> Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                  culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus
+                  error sit voluptatem accusantium doloremque laudantium.</p>
+                <h4 class="font-weight-bold">John Doe</h4>
+                <h6 class="font-weight-bold my-3">Front-end Developer in NY</h6>
               </div>
-            </div>
-          </div>
+            </mdb-carousel-item>
+          </mdb-carousel>
         </div>
       </div>
-      <br><br>
-      <div class="row text-center">
-        <div class="col-md-3 ml-auto col-xl-3 mr-auto">
-          <div class="card">
-            <div class="nav-tabs-navigation">
-              <div class="text-center">
-                <br>
-                <img src="../../assets/Square/dj.jpg" alt="Circle Image" class="rounded-circle" style="padding: 20px; width: 200px; height: 200px;">
-                <h3> Dj & Music Bands </h3> 
-                <button class="btn-lg offer_btn" [routerLink]="['/FilterPagePro/music']">Search now</button>
-                <br><br>       
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 ml-auto col-xl-3 mr-auto">
-          <div class="card">
-            <div class="nav-tabs-navigation">
-              <div class="text-center">
-                <br>
-                <img src="../../assets/Square/caters.jpg" alt="Circle Image" class="rounded-circle"style="padding: 20px; width: 200px; height: 200px;">
-                <h3> Caters</h3> 
-                <button class="btn-lg offer_btn" [routerLink]="['/FilterPagePro/caters']">Search now</button>
-                <br><br>       
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 ml-auto col-xl-3 mr-auto">
-          <div class="card">
-            <div class="nav-tabs-navigation">
-              <div class="text-center">
-                <br>
-                <img src="../../assets/Square/others.jpg" alt="Circle Image" class="rounded-circle" style="padding: 20px; width: 200px; height: 200px;">
-                <h3> Others </h3> 
-                <button class="btn-lg offer_btn" [routerLink]="['/FilterPagePro/others']" >Search now</button>
-                <br><br>       
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-  
-    <!-----------------------------------------------------| CONTACT US |---------------------------------------------------->
-
-    <div class="container z-depth-1 my-5 px-0" id="contacts">
-      <section class="p-5 my-md-5 text-center" style="background-image: url(../../../assets/images/contact.jpg);background-size: cover; background-position: center center;border-radius: 10px;">
-        <h3 class="text-center font-weight-bold text-white mt-5 mb-3">Contact Us</h3>
-        <h4 class="text-center font-weight-normal text-white mx-auto mb-4 pb-2">We love to hear from you!</h4>
-        <form class="mb-5 mx-md-5" action="">
-          <div class="row">
-            <div class="col-md-4 mb-4">
-              <input type="text" id="name" class="form-control" placeholder="Name">
-            </div>
-            <div class="col-md-4 mb-4">
-              <input type="email" id="email" class="form-control" placeholder="Email">
-            </div>
-            <div class="col-md-4 mb-4">
-              <input type="number" id="phone" class="form-control" placeholder="Phone (optional)">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 mb-4">
-              <input type="text" id="subject" class="form-control" placeholder="Subject">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <div class="form-group mb-4">
-                <textarea class="form-control rounded" id="message" rows="3" placeholder="How can we help?"></textarea>
-              </div>
-              <div class="text-center">
-                <button type="submit" class="btn text-white" style="background-color: royalblue;width: 200px;">Submit</button>
-              </div>
-            </div>
-          </div>
-        </form>
       </section>
     </div>
+
+
+    <!-----------------------------------------------------| CONTACT US |---------------------------------------------------->
+
+    <div id="numbers" class=" row analytics">
+      <div class="image" style="background-image: url('../../../assets/images/cover2.jpg');" >
+          <div class="overlay"></div>
+      </div>
+      <div class="container my-5 px-0" id="contacts">
+        <section class="p-5 my-md-5 text-center" style="background-image: url(../../../assets/images/contact.jpg);background-size: cover; background-position: center center;border-radius: 10px;">
+          <h3 class="text-center font-weight-bold text-white mt-5 mb-3">Contact Us</h3>
+          <h4 class="text-center font-weight-normal text-white mx-auto mb-4 pb-2">We love to hear from you!</h4>
+          <form class="mb-5 mx-md-5" action="">
+            <div class="row">
+              <div class="col-md-4 mb-4">
+                <input type="text" id="name" class="form-control" placeholder="Name">
+              </div>
+              <div class="col-md-4 mb-4">
+                <input type="email" id="email" class="form-control" placeholder="Email">
+              </div>
+              <div class="col-md-4 mb-4">
+                <input type="number" id="phone" class="form-control" placeholder="Phone (optional)">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 mb-4">
+                <input type="text" id="subject" class="form-control" placeholder="Subject">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group mb-4">
+                  <textarea class="form-control rounded" id="message" rows="3" placeholder="How can we help?"></textarea>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn text-white" style="background-color: royalblue;width: 200px;">Submit</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+
+
+
+    
     
  <!---------------------------------------Footer------------------------------------------>
 
-    <!-- <footer class="footer mdb-color darken-4" data-background-color="mdb-color darken-4" style="padding: 2px;">
-
-      
-        <div class="row justify-content-md-center sharing-area text-center" style="padding: 2px;">
-          
-          <div class="text-center col-md-12 col-lg-8">
-            <h2 class="font-italic" style="margin: 5px;">Follow Us!</h2>
-          </div>
-            <div class="text-center col-md-12 col-lg-8">
-              <a target="_blank" href="https://www.twitter.com" class="btn btn-neutral btn-icon btn-twitter btn-round btn-lg" rel="tooltip" title="Follow us">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a target="_blank" href="https://www.facebook.com" class="btn btn-neutral btn-icon btn-facebook btn-round btn-lg" rel="tooltip" title="Like us">
-                <i class="fab fa-facebook-square"></i>
-              </a>
-              <a target="_blank" href="https://www.linkedin.com" class="btn btn-neutral btn-icon btn-linkedin btn-lg btn-round" rel="tooltip" title="Follow us">
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a target="_blank" href="https://instagram.com" class="btn btn-neutral btn-icon btn-instagram btn-round btn-lg" rel="tooltip" title="Follow us">
-                <i class="fab fa-instagram"></i>
-              </a>
-            </div>
-          </div>
-  </footer>
-     -->
-    
-  
-</div>
-<footer class="page-footer font-small darken-3" style="background-color: #223;">
+ <footer class="page-footer font-small darken-3" style="background-color: #223;">
   <div class=" d-flex footer-copyright justify-content-center py-3" style="padding-left: 50px ;">
     <a class="justify-text-center" href="https://www.facebook.com/3PixelsPhotography/">
       <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
@@ -359,3 +403,7 @@
   </div>
 </footer>
  
+
+  
+</div>
+
