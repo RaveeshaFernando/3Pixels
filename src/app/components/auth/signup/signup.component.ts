@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthenticationService } from '../../../Services/authentication.service';
 import { NgForm, Form } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/firestore';
+
+
+import { AuthenticationService } from '../../../Services/authentication.service';
 
 @Component({
   selector: 'app-signup',
@@ -16,8 +18,8 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit (form : NgForm){
-    const data :  form.value ;
-    this.firestore.collection('Contact').add(data);
-  }
+  // onSubmit (form : NgForm){
+  //   const data :  form.value ;
+  //   this.firestore.collection('user').add(data);
+  // }
 }

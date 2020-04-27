@@ -4,8 +4,14 @@ import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firest
 import { Router } from '@angular/router';
 import { User } from 'firebase';
 import { auth } from 'firebase/app';
-
 import { UserModel } from '../Models/user.model';
+
+
+import { Observable, BehaviorSubject } from 'rxjs';
+import { map, first } from 'rxjs/operators';
+
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -13,52 +19,35 @@ import { UserModel } from '../Models/user.model';
 export class AuthenticationService {
   addNewUser : UserModel = new UserModel(); 
   user : User ; 
+  userData: any;
 
   constructor(
     public afs: AngularFirestore,
     public afAuth: AngularFireAuth,
     public router: Router,
     public ngZone: NgZone
-  ){  
-  //   this.afAuth.authState.subscribe(user => {
-  //     if (user){
-  //       this.user = user;
-  //       localStorage.setItem('user', JSON.stringify(this.user));
-  //     } else {
-  //       localStorage.setItem('user', null);
-  //     }
-  //   })
+  ){  }
+
+  signUp(email: string, password: string, firstName: any, lastName: any, mobile: any) {
+    return this.afAuth.auth.createUserWithEmailAndPassword(email, password)
+      .then((result) => {
+        // this.SendVerificationMail();
+        this.SetUserData(result.user,firstName,lastName,email,mobile);
+        console.log(result);
+        this.router.navigate(['']);
+      }).catch((error) => {11
+        window.alert(error.message);
+      });
   }
 
-  // async login(email: string, password: string) {
-  //   var result = await this.afAuth.auth.signInWithEmailAndPassword(email, password)
-  //   this.router.navigate([' ']);
-  // }
-
-  // async register(email: string, password: string) {
-  //   var result = await this.afAuth.auth.createUserWithEmailAndPassword(email, password)
-  //   this.sendEmailVerification();
-  // }
-
-  // async sendEmailVerification() {
-  //   await this.afAuth.auth.currentUser.sendEmailVerification()
-  //   this.router.navigate(['signin']);
-  // }
-
-  // async sendPasswordResetEmail(passwordResetEmail: string) {
-  //   return await this.afAuth.auth.sendPasswordResetEmail(passwordResetEmail);
-  // }
-
-  // async logout(){
-  //   await this.afAuth.auth.signOut();
-  //   localStorage.removeItem('user');
-  //   this.router.navigate(['signin']);
-  // }
-
-  // get isLoggedIn(): boolean {
-  //   const  user  =  JSON.parse(localStorage.getItem('user'));
-  //   return  user  !==  null;
-  // }
-
-
+  SetUserData(user: User,fName: any,lName: any,Email: string,Mobile: any) {
+    this.afs.collection('Users').doc(user.uid).set({
+      uid : user.uid,
+      email : Email ,
+      fistName : fName,
+      lastName : lName,
+      mobile : Mobile
+    })
+  }
+  
 }

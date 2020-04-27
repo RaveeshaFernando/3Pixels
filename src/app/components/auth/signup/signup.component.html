@@ -4,35 +4,35 @@
             <strong>Sign up</strong>
         </h5>
         <div class="card-body px-lg-5 pt-0">
-            <form class="text-center" style="color: #757575;" action="#!" #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+            <form class="text-center" style="color: #757575;" action="#!" #form="ngForm" autocomplete="off" >
                 <div class="form-row">
                     <div class="col">
                         <div class="md-form">
-                            <input type="text" id="materialRegisterFormFirstName" class="form-control" placeholder="First Name" name="firstName" #firstName="ngModel" [(ngModel)]="authService.addNewUser.firstName" required>
+                            <input required ngModel type="text" id="firstName" class="form-control" placeholder="First Name"  name="firstName" #firstName="ngModel">
                         </div>
                     </div>
                     <div class="col">
                         <div class="md-form">
-                            <input type="email" id="materialRegisterFormLastName" class="form-control" placeholder="Last Name"  name="lastName" #lastName="ngModel" [(ngModel)]="authService.addNewUser.lastName" required>
+                            <input required ngModel type="email" id="lastName" class="form-control" placeholder="Last Name" name="lastName" #lastName="ngModel">
                         </div>
                     </div>
                 </div>
                 <div class="md-form mt-0">
-                    <input type="email" id="materialRegisterFormEmail" class="form-control" placeholder="E-mail"  name="email" #email="ngModel" [(ngModel)]="authService.addNewUser.email" required>
+                    <input required ngModel type="email" id="email" class="form-control" placeholder="E-mail" name="email" #email="ngModel" >
                 </div>
                 <div class="md-form">
-                    <input type="password" id="materialRegisterFormPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock" placeholder="Password">
+                    <input required ngModel type="password" id="password" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock" placeholder="Password" name="password" #password="ngModel">
                     <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
                         At least 8 characters 
                     </small>
                 </div>
                 <div class="md-form">
-                    <input type="password" id="materialRegisterFormPhone" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" placeholder="Phone Number"  name="mobile" #mobile="ngModel" [(ngModel)]="authService.addNewUser.mobile" required>
+                    <input required ngModel type="number" id="mobile" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" placeholder="Phone Number"  name="mobile" #mobile="ngModel" >
                     <small id="materialRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
                         Optional - for two step authentication
                     </small>
                 </div>
-                <button class="btn btn-outline-primary btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Sign in</button>
+                <button class="btn btn-outline-primary btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit" (click)="authService.signUp(email.value, password.value, firstName.value, lastName.value, mobile.value)">Sign in</button>
                 <hr>
                 <p> already a member?  <a [routerLink]="['/signin']" >Sign in</a> here! </p>
             </form>
