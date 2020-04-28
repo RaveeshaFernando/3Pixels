@@ -1,41 +1,45 @@
-<section class="container my-5 text-center" style="background-size: cover; background-position: center center;max-width: 500px;padding-top: 150px;">  
-    <div class="card">
-        <h5 class="card-header primary-color white-text text-center py-4">
-            <strong>Sign up</strong>
-        </h5>
-        <div class="card-body px-lg-5 pt-0">
-            <form class="text-center" style="color: #757575;" action="#!" #form="ngForm" autocomplete="off" >
-                <div class="form-row">
-                    <div class="col">
-                        <div class="md-form">
-                            <input required ngModel type="text" id="firstName" class="form-control" placeholder="First Name"  name="firstName" #firstName="ngModel">
+<div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/89.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+    <div class="mask d-flex justify-content-center align-items-center" style="background-color:white; opacity: 0.8;"></div>
+     
+    <section class="container my-5 text-center" style="background-size: cover; background-position: center center;max-width: 500px;padding-top: 150px;">  
+        <div class="card z-depth-5">
+            <h5 class="card-header primary-color white-text text-center py-4">
+                <strong>Sign up</strong>
+            </h5>
+            <div class="card-body px-lg-5 pt-0">
+                <form class="text-center" style="color: #757575;" action="#!" #form="ngForm" autocomplete="off" >
+                    <div class="form-row">
+                        <div class="col">
+                            <div class="md-form">
+                                <input required ngModel type="text" id="firstName" class="form-control" placeholder="First Name"  name="firstName" #firstName="ngModel">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="md-form">
+                                <input required ngModel type="email" id="lastName" class="form-control" placeholder="Last Name" name="lastName" #lastName="ngModel">
+                            </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="md-form">
-                            <input required ngModel type="email" id="lastName" class="form-control" placeholder="Last Name" name="lastName" #lastName="ngModel">
-                        </div>
+                    <div class="md-form mt-0">
+                        <input required ngModel type="email" id="email" class="form-control" placeholder="E-mail" name="email" #email="ngModel" >
                     </div>
-                </div>
-                <div class="md-form mt-0">
-                    <input required ngModel type="email" id="email" class="form-control" placeholder="E-mail" name="email" #email="ngModel" >
-                </div>
-                <div class="md-form">
-                    <input required ngModel type="password" id="password" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock" placeholder="Password" name="password" #password="ngModel">
-                    <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
-                        At least 8 characters 
-                    </small>
-                </div>
-                <div class="md-form">
-                    <input required ngModel type="number" id="mobile" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" placeholder="Phone Number"  name="mobile" #mobile="ngModel" >
-                    <small id="materialRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
-                        Optional - for two step authentication
-                    </small>
-                </div>
-                <button class="btn btn-outline-primary btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit" (click)="authService.signUp(email.value, password.value, firstName.value, lastName.value, mobile.value)">Sign in</button>
-                <hr>
-                <p> already a member?  <a [routerLink]="['/signin']" >Sign in</a> here! </p>
-            </form>
+                    <div class="md-form">
+                        <input required ngModel type="password" id="password" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock" placeholder="Password" name="password" #password="ngModel">
+                        <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+                            At least 8 characters 
+                        </small>
+                    </div>
+                    <div class="md-form">
+                        <input required ngModel type="number" id="mobile" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" placeholder="Phone Number"  name="mobile" #mobile="ngModel" >
+                        <small id="materialRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
+                            Optional - for two step authentication
+                        </small>
+                    </div>
+                    <button class="btn btn-outline-primary btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit" (click)="authService.signUp(email.value, password.value, firstName.value, lastName.value, mobile.value)">Sign in</button>
+                    <hr>
+                    <p> already a member?  <a [routerLink]="['/wearethebest']" >Sign in</a> here! </p>
+                </form>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>

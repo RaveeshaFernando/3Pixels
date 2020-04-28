@@ -15,13 +15,16 @@
                     <h6><a href="https://www.flickr.com/photos/workofthreepixels/albums" class="nav-link " style="padding-top: 15px">  Gallery  </a> </h6>
                 </li>
                 <li class="nav-item waves-light text-center" style="width: 100px ;" mdbWavesEffect >
-                    <h6><a href="#contacts" class="nav-link " style="padding-top: 15px">  Contact  </a> </h6>
-                </li>
-                <li class="nav-item waves-light text-center" style="width: 100px ;" mdbWavesEffect >
-                    <h6><a href="#contacts" class="nav-link " style="padding-top: 15px">  Pricing  </a> </h6>
+                    <h6><a  [routerLink]="['/pricing']" class="nav-link " style="padding-top: 15px">  Pricing  </a> </h6>
                 </li>
                 <li class="nav-item waves-light text-center" style="width: 150px ;" mdbWavesEffect >
-                    <h6><a href="#contacts" class="nav-link " style="padding-top: 15px">  Who are we?  </a> </h6>
+                    <h6><a  href="#offer" class="nav-link " style="padding-top: 15px"> What We offer  </a> </h6>
+                </li>
+                <li class="nav-item waves-light text-center" style="width: 100px ;" mdbWavesEffect >
+                    <h6><a  href="#team" class="nav-link " style="padding-top: 15px"> Our Team  </a> </h6>
+                </li>
+                <li class="nav-item waves-light text-center" style="width: 100px ;" mdbWavesEffect >
+                    <h6><a href="#contacts" class="nav-link " style="padding-top: 15px">  Contact  </a> </h6>
                 </li>
             </ul>
 
@@ -31,7 +34,7 @@
 
             <ul class="navbar-nav nav-flex-icons" style="width: 250px;">
                 <li class="nav-item waves-light text-center" mdbWavesEffect >
-                    <h6><a [routerLink]="['/signin']" class="nav-link" style="padding-top: 15px;padding-right: 50px;"> <div class="text-center" style="background-color:royalblue;padding: 5px ;border-radius: 5px ;"> Request a price quotation? </div>  </a> </h6> 
+                    <h6><a [routerLink]="['/pricing']" class="nav-link" style="padding-top: 15px;padding-right: 50px;"> <div class="text-center" style="background-color:royalblue;padding: 5px ;border-radius: 5px ;"> Request a price quotation? </div>  </a> </h6> 
                 </li>
             </ul>
         </links>
