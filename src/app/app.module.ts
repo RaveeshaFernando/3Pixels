@@ -20,6 +20,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SigninComponent } from './components/auth/signin/signin.component';
 import { SignupComponent } from './components/auth/signup/signup.component';
 import { PricingComponent } from './components/pricing/pricing.component';
+import { AdminComponent } from './components/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { PricingComponent } from './components/pricing/pricing.component';
     HomeComponent,
     SigninComponent,
     SignupComponent,
-    PricingComponent
+    PricingComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

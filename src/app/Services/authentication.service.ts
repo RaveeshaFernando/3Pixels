@@ -7,12 +7,6 @@ import { auth } from 'firebase/app';
 import { UserModel } from '../Models/user.model';
 
 
-import { Observable, BehaviorSubject } from 'rxjs';
-import { map, first } from 'rxjs/operators';
-
-
-
-
 @Injectable({
   providedIn: 'root'
 })
@@ -26,18 +20,39 @@ export class AuthenticationService {
     public afAuth: AngularFireAuth,
     public router: Router,
     public ngZone: NgZone
-  ){  }
+  ){ 
+    this.afAuth.authState.subscribe(user => {
+      if (user){
+        this.user = user;
+        localStorage.setItem('user', JSON.stringify(this.user));
+      } else {
+        localStorage.setItem('user', null);
+      }
+    })
+   }
 
-  signUp(email: string, password: string, firstName: any, lastName: any, mobile: any) {
-    return this.afAuth.auth.createUserWithEmailAndPassword(email, password)
-      .then((result) => {
-        // this.SendVerificationMail();
-        this.SetUserData(result.user,firstName,lastName,email,mobile);
-        console.log(result);
+  async signUp(email: string, password: string, firstName: any, lastName: any, mobile: any) {
+    try {
+      const result = await this.afAuth.auth.createUserWithEmailAndPassword(email, password);
+      this.SetUserData(result.user, firstName, lastName, email, mobile);
+      this.router.navigate(['']);
+    }
+    catch (error) {
+      11;
+      window.alert(error.message);
+    }
+  }
+
+  async signIn(email: string, password: string){
+    try {
+      const result = await this.afAuth.auth.signInWithEmailAndPassword(email, password);
+      this.ngZone.run(() => {
         this.router.navigate(['']);
-      }).catch((error) => {11
-        window.alert(error.message);
       });
+    }
+    catch (error) {
+      window.alert(error.message);
+    }
   }
 
   SetUserData(user: User,fName: any,lName: any,Email: string,Mobile: any) {
@@ -49,5 +64,7 @@ export class AuthenticationService {
       mobile : Mobile
     })
   }
+
+
   
 }

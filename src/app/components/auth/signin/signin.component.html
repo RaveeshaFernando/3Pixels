@@ -6,15 +6,15 @@
                 <strong>Sign in</strong>
                 </h5>
                 <div class="card-body px-lg-5 pt-0">
-                    <form style="color: #757575;" action="#!">
+                    <form style="color: #757575;" form="ngForm" autocomplete="off">
                         <div class="md-form">
                             <mdb-icon fas icon="envelope" class="prefix grey-text"></mdb-icon>
-                            <input type="email" id="materialLoginFormEmail" class="form-control" placeholder="E-mail">
+                            <input required #email ngModel name="email" id="email" type="email" class="form-control" placeholder="E-mail">
                         </div>
                         
                         <div class="md-form">
                             <mdb-icon fas icon="key" class="prefix grey-text"></mdb-icon>
-                            <input type="password" id="materialLoginFormPassword" class="form-control" placeholder="Password">
+                            <input required #password ngModel name="password" id ="password"  type="password" class="form-control" placeholder="Password">
                         </div>
             
                         <div class="d-flex justify-content-around">
@@ -28,7 +28,7 @@
                                 <a href="">Forgot password?</a>
                             </div>
                         </div>
-                        <button class="btn btn-outline-primary btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Sign in</button>
+                        <button (click)="authService.signIn(email.value, password.value)" class="btn btn-outline-primary btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Sign in</button>
                         <p class="text-center">Not a member? <a [routerLink]="['/wearethebest2']"  >Register</a></p>
                     </form>
                 </div>
@@ -36,53 +36,3 @@
         </section>
     
 </div>
-<!-- 
-<header>
-    <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/89.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
-      <div class="mask rgba-indigo-strong d-flex justify-content-center align-items-center">
-        <div class="container">
-          <div class="row pt-lg-5 mt-lg-5">
-            <div class="col-md-6 mb-5 mt-md-0 mt-5 white-text text-center text-md-left wow fadeInLeft" data-wow-delay="0.3s">
-              <h1 class="display-4 font-weight-bold">Lorem ipsum</h1>
-              <hr class="hr-light">
-              <h6 class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi
-                fuga
-                nesciunt dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi ea
-                dolor molestiae, quisquam iste.</h6>
-              <a mdbBtn color="white" outline="true" mdbWavesEffect>Learn more</a>
-            </div>
-            <div class="col-md-6 col-xl-5 mb-4">
-              <mdb-card class="wow fadeInRight" data-wow-delay="0.3s">
-                <mdb-card-body class="z-depth-2">
-                  <div class="text-center">
-                    <h3 class="dark-grey-text">
-                      <strong> Sign In Here! </strong>
-                    </h3>
-                    <hr>
-                  </div>
-                  <div class="md-form">
-                    <mdb-icon fas icon="user" class="prefix grey-text"></mdb-icon>
-                    <input type="text" id="form3" class="form-control" mdbInput>
-                    <label for="form3">Your name</label>
-                  </div>
-                  <div class="md-form">
-                    <mdb-icon fas icon="envelope" class="prefix grey-text"></mdb-icon>
-                    <input type="text" id="form2" class="form-control" mdbInput>
-                    <label for="form2">Your email</label>
-                  </div>
-                 
-                  <div class="text-center mt-3">
-                    <button mdbBtn color="indigo" mdbWavesEffect>Send</button>
-                    <hr>
-                    <mdb-checkbox>Subscribe me to the
-                      newsletter</mdb-checkbox>
-                  </div>
-                </mdb-card-body>
-              </mdb-card>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-  </header> -->

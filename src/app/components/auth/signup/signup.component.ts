@@ -18,8 +18,4 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // onSubmit (form : NgForm){
-  //   const data :  form.value ;
-  //   this.firestore.collection('user').add(data);
-  // }
 }
