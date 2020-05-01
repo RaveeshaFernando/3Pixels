@@ -21,6 +21,7 @@ import { SigninComponent } from './components/auth/signin/signin.component';
 import { SignupComponent } from './components/auth/signup/signup.component';
 import { PricingComponent } from './components/pricing/pricing.component';
 import { AdminComponent } from './components/admin/admin.component';
+import { AuthenticationService } from './Services/authentication.service';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,7 @@ import { AdminComponent } from './components/admin/admin.component';
     AngularFirestoreModule,
     AngularFireAnalyticsModule
   ],
-  providers: [],
+  providers: [AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -21,18 +21,16 @@
                     <h6><a  href="#offer" class="nav-link " style="padding-top: 15px"> What We offer  </a> </h6>
                 </li>
                 <li class="nav-item waves-light text-center" style="width: 100px ;" mdbWavesEffect >
-                    <h6><a  href="#team" class="nav-link " style="padding-top: 15px"> Our Team  </a> </h6>
+                    <h6><a href="#contacts" class="nav-link " style="padding-top: 15px"> Contact Us </a> </h6>
                 </li>
-                <li class="nav-item waves-light text-center" style="width: 100px ;" mdbWavesEffect >
-                    <h6><a href="#contacts" class="nav-link " style="padding-top: 15px">  Contact</a> </h6>
+                
+                <li class="nav-item dropdown" dropdown>
+                    <div *ngIf="this.authService.userData">
+                        <h6><a [routerLink]="['admin']" class="nav-link " style="padding-top: 15px"> Admin</a> </h6>
+                    </div>
+                    <button (click)="authService.signOut()" class="dropdown-item waves-light" mdbWavesEffect> Logout </button> 
                 </li>
-                <li class="nav-item waves-light text-center" style="width: 100px ;" mdbWavesEffect >
-                    <h6><a [routerLink]="['Admin']" class="nav-link " style="padding-top: 15px"> Admin </a> </h6>
-                </li>
-            </ul>
-
-
-
+                </ul>
 
 
             <ul class="navbar-nav nav-flex-icons" style="width: 250px;">
