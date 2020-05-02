@@ -1,38 +1,36 @@
-<div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/89.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
-    <div class="mask d-flex justify-content-center align-items-center" style="background-color:white; opacity: 0.8;"></div>
-        <section class="container my-5 " style="background-size: cover; background-position: center center;max-width: 500px;padding-top: 150px;">  
-            <div class="card z-depth-5" style="border: 0px;">
-                <h5 class="card-header primary-color white-text text-center py-4">
-                <strong>Sign in</strong>
-                </h5>
-                <div class="card-body px-lg-5 pt-0">
-                    <form style="color: #757575;" form="ngForm" autocomplete="off">
-                        <div class="md-form">
-                            <mdb-icon fas icon="envelope" class="prefix grey-text"></mdb-icon>
-                            <input required #email ngModel name="email" id="email" type="email" class="form-control" placeholder="E-mail">
-                        </div>
-                        
-                        <div class="md-form">
-                            <mdb-icon fas icon="key" class="prefix grey-text"></mdb-icon>
-                            <input required #password ngModel name="password" id ="password"  type="password" class="form-control" placeholder="Password">
-                        </div>
-            
-                        <div class="d-flex justify-content-around">
-                            <div>
-                                <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="materialLoginFormRemember">
-                                    <label class="form-check-label" for="materialLoginFormRemember">Remember me</label>
-                                </div>
-                            </div>
-                            <div >
-                                <a href="">Forgot password?</a>
+<div class="view" style="background-image: url('../../../assets/images/admin2.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+    <section class="container my-5 " style="background-size: cover; background-position: center center;max-width: 500px;padding-top: 150px;">  
+        <div class="card z-depth-5" style="border: 0px;">
+            <h5 class="card-header primary-color white-text text-center py-4">
+            <strong>Sign in</strong>
+            </h5>
+            <div class="card-body px-lg-5 pt-0">
+                <form class="my-5" style="color: #757575;" form="ngForm" autocomplete="off">
+                    <div class="md-form">
+                        <mdb-icon fas icon="envelope" class="prefix grey-text"></mdb-icon>
+                        <input required #email ngModel name="email" id="email" type="email" class="form-control" placeholder="E-mail">
+                    </div>
+                    
+                    <div class="md-form">
+                        <mdb-icon fas icon="key" class="prefix grey-text"></mdb-icon>
+                        <input required #password ngModel name="password" id ="password"  type="password" class="form-control" placeholder="Password">
+                    </div>
+        
+                    <div class="d-flex justify-content-around">
+                        <div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="materialLoginFormRemember">
+                                <label class="form-check-label" for="materialLoginFormRemember">Remember me</label>
                             </div>
                         </div>
-                        <button (click)="authService.signIn(email.value, password.value)" class="btn btn-outline-primary btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Sign in</button>
-                        <p class="text-center">Not a member? <a [routerLink]="['/wearethebest2']"  >Register</a></p>
-                    </form>
-                </div>
+                        <div >
+                            <a href="">Forgot password?</a>
+                        </div>
+                    </div>
+                    <button (click)="authService.signIn(email.value, password.value)" class="btn btn-outline-primary btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Sign in</button>
+                    <p class="text-center">Not a member? <a [routerLink]="['/wearethebest2']"  >Register</a></p>
+                </form>
             </div>
-        </section>
-    
+        </div>
+    </section>
 </div>

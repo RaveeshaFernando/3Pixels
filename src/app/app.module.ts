@@ -28,6 +28,7 @@ import { AdminSideBarComponent } from './components/admin-side-bar/admin-side-ba
 //services
 import { AuthenticationService } from './Services/authentication.service';
 import { PortfolioService } from './Services/portfolio.service';
+import { IntroService } from './Services/intro.service';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { PortfolioService } from './Services/portfolio.service';
   ],
   providers: [
     AuthenticationService,
-    PortfolioService    
+    PortfolioService,
+    IntroService   
   ],
   bootstrap: [AppComponent]
 })

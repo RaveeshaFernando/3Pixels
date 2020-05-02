@@ -1,14 +1,14 @@
 <div class="wrapper">
 
-    <!--------------------------------------------------------| HOME |------------------------------------------------------->
+<!---------------------------------------------------------| HOME |-------------------------------------------------------->
   
-
-    
     <header id="home">
         <div class="overlay"></div>
-        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-          <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
-        </video>
+        <div *ngFor="let vid of getIntro">
+          <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <source src="{{vid.data}}" type="video/mp4">
+          </video>
+        </div>
         <div class="container h-100">
           <div class="d-flex h-100 text-center align-items-center">
             <div class="w-100 text-white">
@@ -27,7 +27,7 @@
         </div>
       </header>
   
-    <!------------------------------------------------------| CAROUSAL |----------------------------------------------------->
+<!------------------------------------------------------| Who are we |----------------------------------------------------->
 
     <div class="container py-5">
       <section class="dark-grey-text">
@@ -69,49 +69,9 @@
     
     </div>
     
-    <!-- <div class="section" id="carousel" style="padding-top: 50px;padding-bottom: 50px ;">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-12 feature">
-                  <h1 style="font-size:calc(3em + 1vw); font-family: 'Tangerine';color: #c6a16e;"> Who are we ,  <strong> 3 Pixels ? </strong> </h1>
-                  <br>
-                  <h3 style="padding: 15px; text-align: justify ; font-family: 'Tangerine', cursive;color: #c6a16e;font-size: 200%;"> " Sometimes pictures do tell the story of life. We capture your life story in an amazingly uncommon way. " </h3>
-                </div>
   
-                <div class="col-lg-8 col-md-12">
-                  <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'">
-                    <mdb-carousel-item>
-                      <img class="d-block w-100" style="border-radius: 5px;" src="assets/Slides/image1.jpg" alt="slide 1">
-                    </mdb-carousel-item>
-                    <mdb-carousel-item>
-                      <img class="d-block w-100" style="border-radius: 5px;" src="assets/Slides/image2.jpg" alt="slide 2">
-                    </mdb-carousel-item>
-                    <mdb-carousel-item>
-                      <img class="d-block w-100" style="border-radius: 5px;" src="assets/Slides/image3.jpg" alt="slide 3">
-                    </mdb-carousel-item>
-                    <mdb-carousel-item>
-                      <img class="d-block w-100" style="border-radius: 5px;" src="assets/Slides/image4.jpg" alt="slide 4">
-                    </mdb-carousel-item>
-                    <mdb-carousel-item>
-                      <img class="d-block w-100" style="border-radius: 5px;" src="assets/Slides/image5.jpg" alt="slide 5">
-                    </mdb-carousel-item>
-                    <mdb-carousel-item>
-                      <img class="d-block w-100" style="border-radius: 5px;" src="assets/Slides/image6.jpg" alt="slide 6">
-                    </mdb-carousel-item>
-                    <mdb-carousel-item>
-                      <img class="d-block w-100" style="border-radius: 5px;" src="assets/Slides/image7.jpg" alt="slide 7">
-                    </mdb-carousel-item>
-                    <mdb-carousel-item>
-                      <img class="d-block w-100" style="border-radius: 5px;" src="assets/Slides/image8.jpg" alt="slide 8">
-                    </mdb-carousel-item>
-                  </mdb-carousel>
-                </div>
-            </div>
-        </div>
-    </div>  -->
-
-    <!----------------------------------------------------| WHAT WE OFFER |------------------------------------------------>
-
+<!-----------------------------------------------------| WHAT WE OFFER |--------------------------------------------------->
+-
         <div id="offer" class="container" style="padding-top: 80px;">
           <section class="p-md-3 mx-md-5 text-center text-lg-left">
             <h1 class="title text-center" style="font-size:calc(3em + 1vw); font-family: 'Tangerine' ;color:black;"> What We offer of clients </h1> 
@@ -212,139 +172,62 @@
           </section>
         </div>
 
-    <!----------------------------------------------------| Gallery |------------------------------------------------>
+<!-------------------------------------------------------| Gallery |------------------------------------------------------->
     
-    <h1 class="title text-center" style="font-size:calc(3em + 1vw); font-family: 'Tangerine';color:black ;"> Explore Photos </h1>
-    <hr style="background-color: #333 ; width: 30vw;height: 5px;"> 
-    <br>
-    <div class="container-fluid">
-      <div class="row">
-          <div class="col-md-12">
-              <div id="grid" class="row">
-                  <div class="mix col-sm-3 page1 page4 margin30" *ngFor= "let photo of getDefault">
-                      <div class="item-img-wrap">
-                          <img id="imageResult" src="{{photo.data}}" alt="" class="img-fluid rounded shadow-sm mx-auto d-block img-def img-responsive z-depth-5" alt="workimg">
-                          <div class="item-img-overlay">
-                              <a href="#" class="show-image">
-                                  <span></span>
-                              </a>
-                          </div>
-                      </div>
-                  </div>                                                            
-              </div>
-          </div>
-      </div>
-    </div>
-    
-    <div class="container-fluid" >
-      <div id="collapseExample" style="padding-top: 30px;" [ngbCollapse]="isCollapsed">
+    <div id="Gallery">
+      <h1 class="title text-center" style="font-size:calc(3em + 1vw); font-family: 'Tangerine';color:black ;"> Explore Photos </h1>
+      <hr style="background-color: #333 ; width: 30vw;height: 5px;"> 
+      <br>
+      <div class="container-fluid">
         <div class="row">
-          <div class="col-md-12">
-              <div id="grid" class="row">
-                  <div class="mix col-sm-3 page1 page4 margin30">
-                      <div class="item-img-wrap ">
-                          <img src="assets/Slides/image1.jpg" class="img-responsive img-fluid z-depth-5 rounded" alt="workimg">
-                          <div class="item-img-overlay">
-                              <a href="#" class="show-image">
-                                  <span></span>
-                              </a>
-                          </div>
-                      </div> 
-
-                  </div>
-                  <div class="mix col-sm-3 page2 page3 margin30">
-                      <div class="item-img-wrap ">
-                          <img src="assets/Slides/image2.jpg" class="img-responsive img-fluid z-depth-5 rounded" alt="workimg">
-                          <div class="item-img-overlay">
-                              <a href="#" class="show-image">
-                                  <span></span>
-                              </a>
-                          </div>
-                      </div> 
-
-                  </div>
-                  <div class="mix col-sm-3  page3 page2 margin30 ">
-                      <div class="item-img-wrap ">
-                          <img src="assets/Slides/image3.jpg" class="img-responsive img-fluid z-depth-5 rounded" alt="workimg">
-                          <div class="item-img-overlay">
-                              <a href="#" class="show-image">
-                                  <span></span>
-                              </a>
-                          </div>
-                      </div> 
-
-                  </div>
-                  <div class="mix col-sm-3  page4 margin30">
-                      <div class="item-img-wrap ">
-                          <img src="assets/Slides/image4.jpg" class="img-responsive img-fluid z-depth-5 rounded" alt="workimg">
-                          <div class="item-img-overlay">
-                              <a href="#" class="show-image">
-                                  <span></span>
-                              </a>
-                          </div>
-                      </div> 
-
-                  </div>
-                  <div class="mix col-sm-3 page1 margin30 ">
-                      <div class="item-img-wrap ">
-                          <img src="assets/Slides/image5.jpg" class="img-responsive img-fluid z-depth-5 rounded" alt="workimg">
-                          <div class="item-img-overlay">
-                              <a href="#" class="show-image">
-                                  <span></span>
-                              </a>
-                          </div>
-                      </div> 
-
-                  </div>
-                  <div class="mix col-sm-3  page2 margin30">
-                      <div class="item-img-wrap ">
-                          <img src="assets/Slides/image6.jpg" class="img-responsive img-fluid z-depth-5 rounded" alt="workimg">
-                          <div class="item-img-overlay">
-                              <a href="#" class="show-image">
-                                  <span></span>
-                              </a>
-                          </div>
-                      </div> 
-
-                  </div>
-                  <div class="mix col-sm-3  page3 margin30">
-                      <div class="item-img-wrap ">
-                          <img src="assets/Slides/image7.jpg" class="img-responsive img-fluid z-depth-5 rounded" alt="workimg">
-                          <div class="item-img-overlay">
-                              <a href="#" class="show-image">
-                                  <span></span>
-                              </a>
-                          </div>
-                      </div> 
-
-                  </div>
-                  <div class="mix col-sm-3 page4  margin30">
-                      <div class="item-img-wrap ">
-                          <img src="assets/Slides/image8.jpg" class="img-responsive img-fluid z-depth-5 rounded" alt="workimg">
-                          <div class="item-img-overlay">
-                              <a href="#" class="show-image">
-                                  <span></span>
-                              </a>
-                          </div>
-                      </div> 
-                  </div>                                                            
-              </div>
-          </div>
+            <div class="col-md-12">
+                <div id="grid" class="row">
+                    <div class="mix col-sm-3 page1 page4 margin30" *ngFor= "let photo of getDefault">
+                        <div class="item-img-wrap">
+                            <img id="imageResult" src="{{photo.data}}" class="img-fluid rounded shadow-sm mx-auto d-block img-def img-responsive z-depth-5" alt="loading">
+                            <div class="item-img-overlay">
+                                <a href="#" class="show-image">
+                                    <span></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>                                                            
+                </div>
+            </div>
+        </div>
       </div>
+      
+      <div class="container-fluid" >
+        <div id="collapseExample" style="padding-top: 30px;" [ngbCollapse]="isCollapsed">
+          <div class="row">
+            <div class="col-md-12">
+                <div id="grid" class="row">
+                    <div class="mix col-sm-3 page1 page4 margin30"  *ngFor= "let photo of getOptional">
+                        <div class="item-img-wrap ">
+                            <img src="{{photo.data}}" class="img-fluid rounded shadow-sm mx-auto d-block img-def img-responsive z-depth-5" alt="loading">
+                            <div class="item-img-overlay">
+                                <a href="#" class="show-image">
+                                    <span></span>
+                                </a>
+                            </div>
+                        </div> 
+                    </div>                                                       
+                </div>
+            </div>
+        </div>
+        </div>
+      </div>
+      
+      <div class="justify-content-center d-flex" *ngIf="isCollapsed"> 
+        <button type="button" class="btn btn-lg btn-outline-primary" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample"> Load More... </button>
+      </div>
+
+      <div class="justify-content-center d-flex" *ngIf="!isCollapsed"> 
+        <button type="button" class="btn btn-lg btn-outline-primary" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample"> Minimize Content </button>
       </div>
     </div>
-    
 
-    <div class="justify-content-center d-flex" *ngIf="isCollapsed"> 
-      <button type="button" class="btn btn-lg btn-outline-primary" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample"> Load More... </button>
-    </div>
-
-    
-    <div class="justify-content-center d-flex" *ngIf="!isCollapsed"> 
-      <button type="button" class="btn btn-lg btn-outline-primary" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample"> Minimize Content </button>
-    </div>
-
-    <!-----------------------------------------------------| Testimonials |---------------------------------------------------->
+<!-----------------------------------------------------| Testimonials |---------------------------------------------------->
 
     <div class="container mt-5" >
       <section class="text-center dark-grey-text">
@@ -409,10 +292,11 @@
     </div>
 
 
- <!-----------------------------------------------------| Our Team |---------------------------------------------------->
+<!------------------------------------------------------| Our Team |------------------------------------------------------->
+   
     <div id="team" class="container" style="padding-top: 80px;">
       <section class="pb-3 text-center ">
-        <h1 class="title text-center" style="font-size:calc(3em + 1vw); font-family: 'Tangerine';color:black ;"> Our Team </h1>
+        <h1 class="title text-center" style="font-size:calc(3em + 1vw); font-family: 'Tangerine';color:black ;"> Our Amazing Team </h1>
         <hr style="background-color: #333 ; width: 30vw;height: 5px;"> 
         <br>
 
@@ -534,21 +418,7 @@
       </section>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-          
-
-
-
-    <!-----------------------------------------------------| CONTACT US |---------------------------------------------------->
+<!-----------------------------------------------------| CONTACT US |------------------------------------------------------>
 
     <div id="numbers" class=" row analytics">
       <div class="image" style="background-image: url('../../../assets/images/cover2.jpg');" >
@@ -590,9 +460,9 @@
       </div>
     </div>    
     
-    <!---------------------------------------Footer------------------------------------------>
+<!-------------------------------------------------------| Footer |-------------------------------------------------------->
 
- <footer class="page-footer font-small darken-3" style="background-color: #223;">
+  <footer class="page-footer font-small darken-3" style="background-color: #223;">
   <div class=" d-flex footer-copyright justify-content-center py-3" style="padding-left: 50px ;">
     <a class="justify-text-center" href="https://www.facebook.com/3PixelsPhotography/">
       <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
@@ -607,9 +477,6 @@
   <div class="d-flex justify-content-center" style="padding-bottom: 10px;padding-top:5px  ;">
     © 2020 Copyright: <a href="#home"> Team 3Pixels</a>
   </div>
-</footer>
- 
-
-  
+  </footer>
 </div>
 
