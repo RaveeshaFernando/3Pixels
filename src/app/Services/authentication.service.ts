@@ -11,7 +11,7 @@ import { UserModel } from '../Models/user.model';
 })
 export class AuthenticationService {
   userData: any;  
-  log : any ;
+  log : any = null;
   
   constructor(
     public afs: AngularFirestore,

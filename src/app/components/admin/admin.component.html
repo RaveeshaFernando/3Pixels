@@ -1,145 +1,81 @@
-<app-sidebar></app-sidebar>
-<div class="depth" style="background-color: #112;">
-  <div class="d-flex justify-content-center my-3 ">
-      <h1> Hello {{this.authService.log.firstName}} ! </h1>
-  </div>
-
-  <button type="button" class="btn btn-block btn-lg btn-outline-primary my-5" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample"> Customize Portfolio </button>
-  <div id="collapseExample" [ngbCollapse]="isCollapsed">
-    <div class="card" style="background-color: #223;">
-      <div class="card-body">
-        <ngb-tabset [destroyOnHide]="false">
-          <ngb-tab title="Default Content">
-            <ng-template ngbTabContent>
-              <p>These tabs are displayed as pills...</p>
-            </ng-template>
-          </ngb-tab>
-          <ngb-tab title="Hidden Content">
-            <ng-template ngbTabContent>
-              <!-- <div class="form-group col-12">
-                <input type="file" (change)="uploadImage($event,'image1')" accept=".png,.jpg" />
-               </div> -->
-              <div class="image-area mt-4">
-                <div class="col-lg-3" *ngFor= "let photo of getDefault" >
-                  <img id="imageResult" src="{{photo.data}}" alt="" class="img-fluid rounded shadow-sm mx-auto d-block">
-                </div>
-                  <!-- <h3> image : {{this.portfolio.getPhoto('image1')}}</h3> -->
-              </div>
-
-              <div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm">
-                <input id=upload type="file" class="form-control broder-0" (change)="this.portfolio.uploadImage($event,'image3')" accept=".png,.jpg" />
-                <label id="upload-label" for="upload" class="font-weight-light text-muted">Choose file</label>
-              </div>
-            </ng-template>
-          </ngb-tab>
-        </ngb-tabset>
+<div class="view" style="background-image: url('../../../assets/images/admin2.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+  <!-- <div class="mask d-flex justify-content-center align-items-center" style="background-color: #112;opacity: 0.9;z-index:-1;"> </div> -->
+  <app-sidebar></app-sidebar> 
+  <div class="depth">
+      <div class="d-flex justify-content-center my-3 ">
+        <h1 *ngIf="this.authService.log"> Hello {{this.authService.log.firstName}} ! </h1>
       </div>
-
+  
+      <button type="button" class="btn btn-block btn-lg btn-outline-primary my-5" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample"> Customize Portfolio </button>
+      <div id="collapseExample" [ngbCollapse]="isCollapsed">
+        <div class="card z-depth-1" style="background-color: #112;">
+          <div class="card-body">
+            <ngb-tabset [destroyOnHide]="false">
+              <ngb-tab title="Default Content">
+                  <ng-template ngbTabContent>
+                  <div class="row py-2">
+                    <div class="col-lg-8">
+                      <div class="image-area">
+                        <div class="row py-2">
+                          <div class="col-lg-3" *ngFor= "let photo of getDefault" >
+                            <img id="imageResult" src="{{photo.data}}" alt="" class="img-fluid rounded shadow-sm mx-auto d-block img-def">
+                            <h6 class="text-center py-1 text-muted" > {{photo.id}}</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="py-3">
+                        <h4 class="text-center "> Customize default set of photos </h4>
+                        <h6 class="text-center text-muted"> (Please note that this operation is non-reversible) </h6>
+                      </div>
+                      <form class="text-center" autocomplete="off" >
+                        <select id="imageId" name="imageId" class="mdb-select md-form custom-select" style="background-color:#223;" (change)="selectImage($event.target.value)"> 
+                          <option style="background-color: #112;"  value="" disabled selected> Select Image to update</option>
+                          <option style="background-color: #112;"  value="image1">Image 1</option>
+                          <option style="background-color: #112;"  value="image2">Image 2</option>
+                          <option style="background-color: #112;"  value="image3">Image 3</option>
+                          <option style="background-color: #112;"  value="image4">Image 4</option>
+                          <option style="background-color: #112;"  value="image5">Image 5</option>
+                          <option style="background-color: #112;"  value="image6">Image 6</option>
+                          <option style="background-color: #112;"  value="image7">Image 7</option>
+                          <option style="background-color: #112;"  value="image8">Image 8</option>
+                        </select>
+                        <div class="input-group shadow-lg" style="background-color: #223;" >
+                          <input id=upload type="file" class="form-control" (change)="newImage($event)" accept=".png,.jpg" />
+                          <label id="upload-label" for="upload" class="font-weight-light text-muted" >Choose file</label>
+                        </div> 
+                        <button class="btn btn-outline-primary btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit" (click)="submit()">Update </button>   
+                      </form>
+                    </div>
+                  </div>
+  
+                  </ng-template>
+              </ngb-tab>
+              <ngb-tab title="Hidden Content">
+                  <ng-template ngbTabContent>
+                  <div class="py-2">
+                    <div class="image-area">
+                      <div class="row py-2">
+                        <div class="col-lg-3" *ngFor= "let photo of getDefault" >
+                          <img id="imageResult" src="{{photo.data}}" alt="" class="img-fluid rounded shadow-sm mx-auto d-block img-def">
+                          <h6 class="text-center py-1 text-muted" > {{photo.id}}</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm" >
+                    <input id=upload type="file" class="form-control broder-0"(change)="this.portfolio.uploadImage($event,'image3')" accept=".png,.jpg" />
+                    <label id="upload-label" for="upload" class="font-weight-light text-muted" >Choose file</label>
+                  </div>
+                  </ng-template>
+              </ngb-tab>
+            </ngb-tabset>
+          </div>
+        </div>
+      </div>
+      
     </div>
-  </div>
-
-
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p id="hey"> fdvfcxdddddddddddddddddb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
-  <p> fdvfdb </p>
 </div>
+ 

@@ -221,92 +221,15 @@
       <div class="row">
           <div class="col-md-12">
               <div id="grid" class="row">
-                  <div class="mix col-sm-3 page1 page4 margin30">
-                      <div class="item-img-wrap ">
-                          <img src="assets/Slides/image1.jpg" class="img-responsive img-fluid z-depth-5 rounded" alt="workimg">
+                  <div class="mix col-sm-3 page1 page4 margin30" *ngFor= "let photo of getDefault">
+                      <div class="item-img-wrap">
+                          <img id="imageResult" src="{{photo.data}}" alt="" class="img-fluid rounded shadow-sm mx-auto d-block img-def img-responsive z-depth-5" alt="workimg">
                           <div class="item-img-overlay">
                               <a href="#" class="show-image">
                                   <span></span>
                               </a>
                           </div>
-                      </div> 
-  
-                  </div>
-                  <div class="mix col-sm-3 page2 page3 margin30">
-                      <div class="item-img-wrap ">
-                          <img src="assets/Slides/image2.jpg" class="img-responsive img-fluid z-depth-5 rounded" alt="workimg">
-                          <div class="item-img-overlay">
-                              <a href="#" class="show-image">
-                                  <span></span>
-                              </a>
-                          </div>
-                      </div> 
-  
-                  </div>
-                  <div class="mix col-sm-3  page3 page2 margin30 ">
-                      <div class="item-img-wrap ">
-                          <img src="assets/Slides/image3.jpg" class="img-responsive img-fluid z-depth-5 rounded" alt="workimg">
-                          <div class="item-img-overlay">
-                              <a href="#" class="show-image">
-                                  <span></span>
-                              </a>
-                          </div>
-                      </div> 
-  
-                  </div>
-                  <div class="mix col-sm-3  page4 margin30">
-                      <div class="item-img-wrap ">
-                          <img src="assets/Slides/image4.jpg" class="img-responsive img-fluid z-depth-5 rounded" alt="workimg">
-                          <div class="item-img-overlay">
-                              <a href="#" class="show-image">
-                                  <span></span>
-                              </a>
-                          </div>
-                      </div> 
-  
-                  </div>
-                  <div class="mix col-sm-3 page1 margin30 ">
-                      <div class="item-img-wrap ">
-                          <img src="assets/Slides/image5.jpg" class="img-responsive img-fluid z-depth-5 rounded" alt="workimg">
-                          <div class="item-img-overlay">
-                              <a href="#" class="show-image">
-                                  <span></span>
-                              </a>
-                          </div>
-                      </div> 
-  
-                  </div>
-                  <div class="mix col-sm-3  page2 margin30">
-                      <div class="item-img-wrap ">
-                          <img src="assets/Slides/image6.jpg" class="img-responsive img-fluid z-depth-5 rounded" alt="workimg">
-                          <div class="item-img-overlay">
-                              <a href="#" class="show-image">
-                                  <span></span>
-                              </a>
-                          </div>
-                      </div> 
-  
-                  </div>
-                  <div class="mix col-sm-3  page3 margin30">
-                      <div class="item-img-wrap ">
-                          <img src="assets/Slides/image7.jpg" class="img-responsive img-fluid z-depth-5 rounded" alt="workimg">
-                          <div class="item-img-overlay">
-                              <a href="#" class="show-image">
-                                  <span></span>
-                              </a>
-                          </div>
-                      </div> 
-  
-                  </div>
-                  <div class="mix col-sm-3 page4  margin30">
-                      <div class="item-img-wrap ">
-                          <img src="assets/Slides/image8.jpg" class="img-responsive img-fluid z-depth-5 rounded" alt="workimg">
-                          <div class="item-img-overlay">
-                              <a href="#" class="show-image">
-                                  <span></span>
-                              </a>
-                          </div>
-                      </div> 
+                      </div>
                   </div>                                                            
               </div>
           </div>
