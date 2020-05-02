@@ -2,7 +2,6 @@ import { Injectable, NgZone } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
-// import { User } from 'firebase';
 import { auth } from 'firebase/app';
 import { UserModel } from '../Models/user.model';
 
@@ -12,9 +11,8 @@ import { UserModel } from '../Models/user.model';
 })
 export class AuthenticationService {
   userData: any;  
-
-  getLoggedUser : UserModel ;
-
+  log : any ;
+  
   constructor(
     public afs: AngularFirestore,
     public afAuth: AngularFireAuth,
@@ -24,10 +22,12 @@ export class AuthenticationService {
     this.afAuth.authState.subscribe(user => {
       if (user){
         this.userData = user;
-        localStorage.setItem('user', JSON.stringify(user));
-        console.log("hello " + user);
+        this.afs.collection("Users").doc(user.email).get().subscribe(data=>{
+          localStorage.setItem('userLog', JSON.stringify(data.data()))
+          this.log = data.data();
+        })
       } else {
-        localStorage.setItem('user', null);
+        localStorage.setItem('userLog', null);
       }
     })
    }
@@ -36,6 +36,7 @@ export class AuthenticationService {
   async signUp(email: string, password: string, firstName: any, lastName: any, mobile: any) {
     return this.afAuth.auth.createUserWithEmailAndPassword(email, password)
       .then((result) => {
+        result.user.uid
         this.SetUserData(result.user,firstName,lastName,mobile);
         this.router.navigate(['']);
       }).catch((error) => {
@@ -49,7 +50,6 @@ export class AuthenticationService {
         this.ngZone.run(() => {
           this.router.navigate(['']);
         });
-        // this.SetUserData(result.user);
       }).catch((error) => {
         window.alert(error.message)
       })
@@ -58,7 +58,8 @@ export class AuthenticationService {
   async signOut() {
     console.log("camhe here");
     return this.afAuth.auth.signOut().then(() => {
-      localStorage.removeItem('user');
+      localStorage.removeItem('userLog');
+      this.log = null ;
       this.router.navigate(['wearethebest']);
     });
   }
@@ -66,7 +67,7 @@ export class AuthenticationService {
   SetUserData(user,fName : string,lName : string ,tel : string) {
     this.afs.collection('Users').doc(user.email).set({
       email : user.email ,
-      fistName : fName,
+      firstName : fName,
       lastName : lName,
       mobile : tel
     })

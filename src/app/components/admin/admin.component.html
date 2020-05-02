@@ -1,1 +1,145 @@
-<p>admin works!</p>
+<app-sidebar></app-sidebar>
+<div class="depth" style="background-color: #112;">
+  <div class="d-flex justify-content-center my-3 ">
+      <h1> Hello {{this.authService.log.firstName}} ! </h1>
+  </div>
+
+  <button type="button" class="btn btn-block btn-lg btn-outline-primary my-5" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample"> Customize Portfolio </button>
+  <div id="collapseExample" [ngbCollapse]="isCollapsed">
+    <div class="card" style="background-color: #223;">
+      <div class="card-body">
+        <ngb-tabset [destroyOnHide]="false">
+          <ngb-tab title="Default Content">
+            <ng-template ngbTabContent>
+              <p>These tabs are displayed as pills...</p>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab title="Hidden Content">
+            <ng-template ngbTabContent>
+              <!-- <div class="form-group col-12">
+                <input type="file" (change)="uploadImage($event,'image1')" accept=".png,.jpg" />
+               </div> -->
+              <div class="image-area mt-4">
+                <div class="col-lg-3" *ngFor= "let photo of getDefault" >
+                  <img id="imageResult" src="{{photo.data}}" alt="" class="img-fluid rounded shadow-sm mx-auto d-block">
+                </div>
+                  <!-- <h3> image : {{this.portfolio.getPhoto('image1')}}</h3> -->
+              </div>
+
+              <div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm">
+                <input id=upload type="file" class="form-control broder-0" (change)="this.portfolio.uploadImage($event,'image3')" accept=".png,.jpg" />
+                <label id="upload-label" for="upload" class="font-weight-light text-muted">Choose file</label>
+              </div>
+            </ng-template>
+          </ngb-tab>
+        </ngb-tabset>
+      </div>
+
+    </div>
+  </div>
+
+
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p id="hey"> fdvfcxdddddddddddddddddb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+  <p> fdvfdb </p>
+</div>
