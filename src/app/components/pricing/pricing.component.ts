@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pricing.component.scss']
 })
 export class PricingComponent implements OnInit {
-
+  currentJustify = "justified" ;
   constructor() { }
 
   ngOnInit(): void {

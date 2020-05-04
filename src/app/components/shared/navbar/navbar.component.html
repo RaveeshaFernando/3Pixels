@@ -1,11 +1,58 @@
+<!-- <mdb-navbar class="navCss" SideClass="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar " [containerInside]="false" style="background-color: royalblue;">
+        <mdb-navbar-brand>
+            <a class="logo navbar-brand" href="#">
+                <img src="../../../../assets/images/logoWhite.png" alt="logo" width="100px">
+            </a>
+        </mdb-navbar-brand>
 
-    <mdb-navbar class="navCss" SideClass="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar " [containerInside]="false" style="background-color: royalblue;">
-            <mdb-navbar-brand>
-                <a class="logo navbar-brand" href="#">
-                    <img src="../../../../assets/images/logoWhite.png" alt="logo" width="100px">
-                </a>
-            </mdb-navbar-brand>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item waves-light text-center" style="width: 100px ;"  mdbWavesEffect>
+                <h6><a href="#home"  class="nav-link " style="padding-top: 15px"> Home  </a></h6>
+            </li>
+            <li class="nav-item waves-light text-center" style="width: 100px ;" mdbWavesEffect >
+                <h6><a href="https://www.flickr.com/photos/workofthreepixels/albums" class="nav-link " style="padding-top: 15px">  Gallery  </a> </h6>
+            </li>
+            <li class="nav-item waves-light text-center" style="width: 100px ;" mdbWavesEffect >
+                <h6><a  [routerLink]="['/pricing']" class="nav-link " style="padding-top: 15px">  Pricing  </a> </h6>
+            </li>
+            <li class="nav-item waves-light text-center" style="width: 150px ;" mdbWavesEffect >
+                <h6><a  href="#offer" class="nav-link " style="padding-top: 15px"> What We offer  </a> </h6>
+            </li>
+            <li class="nav-item waves-light text-center" style="width: 100px ;" mdbWavesEffect >
+                <h6><a href="#contacts" class="nav-link " style="padding-top: 15px"> Contact Us </a> </h6>
+            </li>
+        </ul>
 
+        <ul class="navbar-nav ml-auto nav-flex-icons rightBtn">
+            <li class="nav-item waves-light text-center" mdbWavesEffect >
+                    <button class="btn btn-sm btn-outline-primary">
+                    <a [routerLink]="['/pricing']" class="nav-link"> Request a price quotation?</a>
+                </button>
+            </li>
+            <li class="nav-item mx-3">
+                <div *ngIf="this.authService.userData">
+                        <button class="btn btn-sm btn-outline-primary">
+                            <a [routerLink]="['admin']" class="nav-link "> <i class="fas fa-user-cog"> </i></a> 
+                        </button>
+                </div>
+            </li>
+            <li class="nav-item">
+                <div *ngIf="this.authService.userData">
+                        <button class="btn btn-sm btn-outline-danger" (click)="authService.signOut()"> <a class="nav-link"> <i class="fas fa-sign-out-alt"></i> </a></button>
+                </div>
+            </li>
+        </ul>
+</mdb-navbar> -->
+
+<header>
+    <mdb-navbar class="navCss" SideClass="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" [containerInside]="false">
+        <mdb-navbar-brand>
+            <a class="logo navbar-brand" href="#">
+                <img src="../../../../assets/images/logoWhite.png" alt="logo" width="100px">
+            </a>
+        </mdb-navbar-brand>
+
+        <links>
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item waves-light text-center" style="width: 100px ;"  mdbWavesEffect>
                     <h6><a href="#home"  class="nav-link " style="padding-top: 15px"> Home  </a></h6>
@@ -23,7 +70,7 @@
                     <h6><a href="#contacts" class="nav-link " style="padding-top: 15px"> Contact Us </a> </h6>
                 </li>
             </ul>
- 
+
             <ul class="navbar-nav ml-auto nav-flex-icons rightBtn">
                 <li class="nav-item waves-light text-center" mdbWavesEffect >
                         <button class="btn btn-sm btn-outline-primary">
@@ -43,4 +90,6 @@
                     </div>
                 </li>
             </ul>
+        </links>
     </mdb-navbar>
+</header>
